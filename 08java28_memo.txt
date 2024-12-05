@@ -26,3 +26,6 @@
 ■git
 
 https://github.com/minami-mo911/08java28_pj.git
+
+git add -A
+ - すべてadd
