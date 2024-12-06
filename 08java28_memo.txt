@@ -29,3 +29,8 @@ https://github.com/minami-mo911/08java28_pj.git
 
 git add -A
  - すべてadd
+
+■DBの保存先
+ポートフォリオをgitにpushする際は、DBの保存先アドレスの絶対パスを
+メモ等に貼り付けて保存しておくのがよい～
+∟githubのREADMEファイルに入れるのもなおよい
