@@ -30,6 +30,11 @@ https://github.com/minami-mo911/08java28_pj.git
 git add -A
  - すべてadd
 
+■.gitignoreのフォルダが勝手に作られている場合のEclipse対応
+Eclipse上で、gitにコミットされているフォルダ内に新規でプロジェクトを作成すると
+勝手に".gitignore"に作られてしまう
+⇒Eclipse > 設定 > "git"と入力 > ヒストリー内 >プロジェクト > 「派生しているリソースを地頭的に.gitignoreに追加する」というチェックを外す
+
 ■DBの保存先
 ポートフォリオをgitにpushする際は、DBの保存先アドレスの絶対パスを
 メモ等に貼り付けて保存しておくのがよい～
