@@ -268,3 +268,394 @@ join users AS U
 on Pi.user_id = U.user_id
 join photo AS Ph
 on Pi.post_id = Ph.post_id [42102-232]
+2024-12-16 13:42:26.820437+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table stamp_source (\000d\000a    category_id      INTEGER     generated always as identity primary key,\000d\000a    category_name    VARCHAR(30) not null default 'other',    \000d\000a[*])"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table stamp_source (\000d\000a    category_id      INTEGER     generated always as identity primary key,\000d\000a    category_name    VARCHAR(30) not null default 'other',    \000d\000a[*])"; expected "identifier"; SQL statement:
+create table stamp_source (
+    category_id      INTEGER     generated always as identity primary key,
+    category_name    VARCHAR(30) not null default 'other',    
+) [42001-232]
+2024-12-16 13:42:26.840385+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CATEGORY__SOURCE" が見つかりません
+Table "CATEGORY__SOURCE" not found; SQL statement:
+insert into category__source (category_name)
+values ('その他')
+
+insert into category__source (category_name)
+values ('いぬ')
+
+insert into category__source (category_name)
+values ('ねこ')
+
+insert into category__source (category_name)
+values ('とり')
+
+insert into category__source (category_name)
+values ('ハムスター')
+
+insert into category__source (category_name)
+values ('りす')
+
+insert into category__source (category_name)
+values ('はちゅうるい')
+
+insert into category__source (category_name)
+values ('さかな') [42102-232]
+2024-12-16 13:43:18.566122+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table stamp_source (\000d\000a    category_id      INTEGER     generated always as identity primary key,\000d\000a    category_name    VARCHAR(30) not null default 'other',    \000d\000a[*])"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table stamp_source (\000d\000a    category_id      INTEGER     generated always as identity primary key,\000d\000a    category_name    VARCHAR(30) not null default 'other',    \000d\000a[*])"; expected "identifier"; SQL statement:
+create table stamp_source (
+    category_id      INTEGER     generated always as identity primary key,
+    category_name    VARCHAR(30) not null default 'other',    
+) [42001-232]
+2024-12-16 13:43:18.568129+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CATEGORY_SOURCE" が見つかりません
+Table "CATEGORY_SOURCE" not found; SQL statement:
+insert into category_source (category_name)
+values ('その他')
+
+insert into category_source (category_name)
+values ('いぬ')
+
+insert into category_source (category_name)
+values ('ねこ')
+
+insert into category_source (category_name)
+values ('とり')
+
+insert into category_source (category_name)
+values ('ハムスター')
+
+insert into category_source (category_name)
+values ('りす')
+
+insert into category_source (category_name)
+values ('はちゅうるい')
+
+insert into category_source (category_name)
+values ('さかな') [42102-232]
+2024-12-16 13:43:19.515725+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "create table stamp_source (\000d\000a    category_id      INTEGER     generated always as identity primary key,\000d\000a    category_name    VARCHAR(30) not null default 'other',    \000d\000a[*])"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "create table stamp_source (\000d\000a    category_id      INTEGER     generated always as identity primary key,\000d\000a    category_name    VARCHAR(30) not null default 'other',    \000d\000a[*])"; expected "identifier"; SQL statement:
+create table stamp_source (
+    category_id      INTEGER     generated always as identity primary key,
+    category_name    VARCHAR(30) not null default 'other',    
+) [42001-232]
+2024-12-16 13:43:19.517676+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CATEGORY_SOURCE" が見つかりません
+Table "CATEGORY_SOURCE" not found; SQL statement:
+insert into category_source (category_name)
+values ('その他')
+
+insert into category_source (category_name)
+values ('いぬ')
+
+insert into category_source (category_name)
+values ('ねこ')
+
+insert into category_source (category_name)
+values ('とり')
+
+insert into category_source (category_name)
+values ('ハムスター')
+
+insert into category_source (category_name)
+values ('りす')
+
+insert into category_source (category_name)
+values ('はちゅうるい')
+
+insert into category_source (category_name)
+values ('さかな') [42102-232]
+2024-12-16 13:43:33.725188+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "STAMP_SOURCE" はすでに存在します
+Table "STAMP_SOURCE" already exists; SQL statement:
+create table stamp_source (
+    category_id      INTEGER     generated always as identity primary key,
+    category_name    VARCHAR(30)  not null default 'other'  
+) [42101-232]
+2024-12-16 13:43:33.727182+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CATEGORY_SOURCE" が見つかりません
+Table "CATEGORY_SOURCE" not found; SQL statement:
+insert into category_source (category_name)
+values ('その他')
+
+insert into category_source (category_name)
+values ('いぬ')
+
+insert into category_source (category_name)
+values ('ねこ')
+
+insert into category_source (category_name)
+values ('とり')
+
+insert into category_source (category_name)
+values ('ハムスター')
+
+insert into category_source (category_name)
+values ('りす')
+
+insert into category_source (category_name)
+values ('はちゅうるい')
+
+insert into category_source (category_name)
+values ('さかな') [42102-232]
+2024-12-16 13:44:08.180671+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "insert into category_source (category_name)\000d\000avalues ('その他')\000d\000a\000d\000a[*]insert into category_source (category_name)\000d\000avalues ('いぬ')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('ねこ')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('とり')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('ハムスター')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('りす')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('はちゅうるい')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('さかな')"
+Syntax error in SQL statement "insert into category_source (category_name)\000d\000avalues ('その他')\000d\000a\000d\000a[*]insert into category_source (category_name)\000d\000avalues ('いぬ')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('ねこ')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('とり')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('ハムスター')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('りす')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('はちゅうるい')\000d\000a\000d\000ainsert into category_source (category_name)\000d\000avalues ('さかな')"; SQL statement:
+insert into category_source (category_name)
+values ('その他')
+
+insert into category_source (category_name)
+values ('いぬ')
+
+insert into category_source (category_name)
+values ('ねこ')
+
+insert into category_source (category_name)
+values ('とり')
+
+insert into category_source (category_name)
+values ('ハムスター')
+
+insert into category_source (category_name)
+values ('りす')
+
+insert into category_source (category_name)
+values ('はちゅうるい')
+
+insert into category_source (category_name)
+values ('さかな') [42000-232]
+2024-12-16 13:49:07.003444+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CATEGORY_SOURCE" が見つかりません
+Table "CATEGORY_SOURCE" not found; SQL statement:
+insert into category_source (category_name)
+values
+    ('その他'),
+    ('いぬ'),
+    ('ねこ'),
+    ('とり'),
+    ('ハムスター'),
+    ('りす'),
+    ('はちゅうるい'),
+    ('さかな') [42102-232]
+2024-12-19 14:39:52.825711+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+SELECT ID, NAME, TEXT, DATETIME, GOOD FROM TWEETS ORDER BY ID DESC [42102-232]
+2024-12-19 14:41:04.801298+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+SELECT ID, NAME, TEXT, DATETIME, GOOD FROM TWEETS ORDER BY ID DESC [42102-232]
+2024-12-19 14:45:48.715812+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+SELECT ID, NAME, TEXT, DATETIME, GOOD FROM TWEETS ORDER BY ID DESC [42102-232]
+2024-12-19 14:47:00.899760+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+SELECT ID, NAME, TEXT, DATETIME, GOOD FROM TWEETS ORDER BY ID DESC [42102-232]
+2024-12-19 14:47:08.985695+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+INSERT INTO TWEETS(NAME, TEXT, DATETIME, GOOD, IMAGE_URL) VALUES(?, ?, ?, ?, ?) [42102-232]
+2024-12-19 15:59:36.281596+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "EMAIL" が見つかりません
+Column "EMAIL" not found; SQL statement:
+SELECT user_id user_name, mail_address, password FROM users WHERE email = ? [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at dao.UsersDAO.findUserByEmail(UsersDAO.java:19)
+	at model.LoginLogic.execute(LoginLogic.java:14)
+	at servlet.Login.doPost(Login.java:30)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-12-19 15:59:37.955209+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "EMAIL" が見つかりません
+Column "EMAIL" not found; SQL statement:
+SELECT user_id user_name, mail_address, password FROM users WHERE email = ? [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at dao.UsersDAO.findUserByEmail(UsersDAO.java:19)
+	at model.LoginLogic.execute(LoginLogic.java:14)
+	at servlet.Login.doPost(Login.java:30)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-12-19 15:59:49.109931+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "EMAIL" が見つかりません
+Column "EMAIL" not found; SQL statement:
+SELECT user_id user_name, mail_address, password FROM users WHERE email = ? [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at dao.UsersDAO.findUserByEmail(UsersDAO.java:19)
+	at model.LoginLogic.execute(LoginLogic.java:14)
+	at servlet.Login.doPost(Login.java:30)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-12-19 16:00:35.602934+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "EMAIL" が見つかりません
+Column "EMAIL" not found; SQL statement:
+SELECT user_id user_name, mail_address, password FROM users WHERE email = ? [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:147)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1235)
+	at org.h2.command.query.Query.prepare(Query.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at dao.UsersDAO.findUserByEmail(UsersDAO.java:19)
+	at model.LoginLogic.execute(LoginLogic.java:14)
+	at servlet.Login.doPost(Login.java:30)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-12-19 16:01:13.877722+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+SELECT ID, NAME, TEXT, DATETIME, GOOD FROM TWEETS ORDER BY ID DESC [42102-232]
+2024-12-19 16:02:36.849269+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "TWEETS" が見つかりません
+Table "TWEETS" not found; SQL statement:
+SELECT ID, NAME, TEXT, DATETIME, GOOD FROM TWEETS ORDER BY ID DESC [42102-232]
