@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* Google FontsのZen Maru Gothicを使用 */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-color: #DDEEEE; /* 背景色：淡いグレー */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upper-container {
+    margin: 3rem 0;
+}
+
+.lower-container {
+    padding-top: 1rem;
+}
+
+h1 {
+    font-size: 24px;
+    color: #134B70; /* 見出しの濃い色 */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #134B70; /* テキストの暗い青 */
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form, .textarea {
+    border: solid 1.5px #508C9B; /* 入力欄のボーダー色 */
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #EEEEEE; /* 入力欄の背景色 */
+    color: #201E43;
+}
+
+.submit {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1.5rem;
+    background-color: rgb(62, 184, 193); /* ボタンの濃い青 */
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: rgb(100, 217, 217); /* ボタンのホバー時の色 */
+}
+
+.post1ken {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.line-height-center{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%)
+             translateY(-50%);
+}
+
+/* 画像アップロードフィールド */
+.file-label {
+    display: block;
+    margin-top: 1rem;
+    color: #134B70;
+    font-weight: bold;
+}
+
+.file-input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: solid 1.5px #508C9B;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #EEEEEE;
+    color: #201E43;
+}
+
+/* リアクションボタン */
+.reaction-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.reaction-btn:hover {
+    transform: scale(1.2);
+}
+
+/* 投稿フォーム */
+.post-form .form-group {
+    margin-bottom: 1rem;
+}
+
+/* カテゴリ選択フォーム */
+#categorySelect {
+    padding: 0.5rem;
+    border: solid 1.5px #508C9B;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #EEEEEE;
+    color: #201E43;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+/* ラベルのスタイル */
+label[for="categorySelect"] {
+    font-weight: bold;
+    color: #134B70;
+    margin-top: 1rem;
+}

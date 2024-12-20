@@ -124,7 +124,7 @@ values
 
 --▼▼▼▼▼ 結合テスト ▼▼▼▼▼--
 -- postとusersの結合テスト --
-select user_name, post_id, caption, post_date
+select post_id, user_name, caption, post_date, picture_url
 from post_item AS Pi
 join users AS U
 on Pi.user_id = U.user_id
@@ -153,3 +153,55 @@ join category_master AS Cm
 on Pi.post_id = Cm.post_id
 join category_source AS Cs
 on Cm.category_id = Cs.category_id
+
+
+
+
+
+-- FindAllPostWithDetails ビューの作成（完全版）
+create view FindAllPostWithDetails as
+select 
+    pi.post_id,
+    pi.user_id,
+    u.user_name,
+    pi.caption,
+    pi.post_date,
+    p.picture_url,
+    group_concat(distinct cs.category_name order by cs.category_id) as categories,
+    sum(coalesce(sm.stamp_num, 0)) as total_stamps
+from 
+    post_item pi
+join 
+    users u
+on 
+    pi.user_id = u.user_id
+left join 
+    picture p
+on 
+    pi.post_id = p.post_id
+left join 
+    category_master cm
+on 
+    pi.post_id = cm.post_id
+left join 
+    category_source cs
+on 
+    cm.category_id = cs.category_id
+left join 
+    stamp_master sm
+on 
+    pi.post_id = sm.post_id
+group by 
+    pi.post_id, pi.user_id, u.user_name, pi.caption, pi.post_date, p.picture_url
+order by 
+    pi.post_date desc;
+
+
+
+
+POST_ID  	USER_ID  	USER_NAME  	CAPTION  	POST_DATE  	PICTURE_URL  	CATEGORIES  	TOTAL_STAMPS  
+4	hogehoge_3_3	ほげおじ	犬って健康にいいですね	2024-12-13 16:55:00	null	その他	0
+3	nekoneko222	いくら	犬さんかわよ～	2024-12-13 16:50:00	null	その他	0
+2	inu_dog223	いぬのこまちゃん	おうちに帰ってきました。満足そうです！	2024-12-13 14:10:00	null	いぬ	1
+1	inu_dog223	いぬのこまちゃん	お散歩中です	2024-12-13 13:45:00	/ikimonoSNS/WEB-INF/img/inu001.jpg	いぬ	6
+(4 行, 5 ms)
