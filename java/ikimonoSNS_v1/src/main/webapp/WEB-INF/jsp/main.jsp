@@ -36,35 +36,39 @@
     <div class="container lower-container">
         <h1>タイムライン</h1>
         
-        <form action="Main" method="post" enctype="multipart/form-data" class="post-form">
-            <div class="form-group">
-                <input type="text" name="caption" class="textarea" placeholder="今日のいきものはどう？">
-            </div>
-            
-            <div class="form-group">
-            	<label for="categorySelect">カテゴリーを選択:</label>
-            	<select id="categorySelect" name="categoryId" required>
-                <c:forEach var="category" items="${categories}">
-                    <option value="${category.id}">${category.name}</option>
-                </c:forEach>
-            </select>
-        	</div>
-        	
-        	<div class="form-group">
-                <label for="imageUpload" class="file-label">画像をアップロード:</label>
-                <input type="file" id="imageUpload" name="image" accept="image/*" class="file-input">
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="投稿する" class="submit">
-            </div>
-        </form>
+    <form action="Post" method="post" enctype="multipart/form-data" class="post-form">
+	    
+	    	
+	    <div class="form-group">
+	        <input type="text" name="caption" class="textarea" placeholder="今日のいきものはどう？">
+	    </div>
+	    
+	    <div class="form-group">
+	        <label for="categorySelect">カテゴリーを選択:</label>
+	        
+	        <select id="categorySelect" name="categoryId" required>
+	            <c:forEach var="category" items="${categories}">
+	                <option value="${category.id}">${category.name}</option>
+	            </c:forEach>
+	        </select>
+	    </div>
+	    
+	    <div class="form-group">
+	        <label for="imageUpload" class="file-label">画像をアップロード:</label>
+	        <input type="file" id="imageUpload" name="image" accept="image/*" class="file-input">
+	    </div>
+	    <input type="hidden" name="action" value="post">
+	    <div class="form-group">
+	        <input type="submit" value="投稿する" class="submit">
+	    </div>
+	</form>
         
         <c:if test="${not empty errorMsg}">
             <p><c:out value="${errorMsg}" /></p>
         </c:if>
 
         <!-- 投稿の一覧表示 -->
+        
         <c:forEach var="post" items="${postList}">
             <div class="post1ken">
                 <p>投稿ID： ${post.id}</p>
@@ -77,17 +81,23 @@
                 </c:if>
                 <p>カテゴリ： ${post.category}</p>
                 <p>リアクション数： ${post.totalStamp}</p>
+                
+                
+           
 
                 <!-- リアクションボタン -->
+                <!--
                 <form action="ReactionServlet" method="post" class="reaction-form">
                     <input type="hidden" name="postId" value="${post.id}" />
                     <button type="submit" name="emoji" value="👍" class="reaction-btn">👍</button>
                     <button type="submit" name="emoji" value="❤️" class="reaction-btn">❤️</button>
                     <button type="submit" name="emoji" value="😂" class="reaction-btn">😂</button>
                 </form>
+                
+                -->
             </div>
             <hr>
-        </c:forEach>
+        </c:forEach> 
     </div>
 </body>
 </html>

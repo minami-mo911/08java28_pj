@@ -1,6 +1,8 @@
 package beans;
 
-public class Reaction {
+import java.io.Serializable;
+
+public class Reaction implements Serializable{
     private int taskId;
     private String userName;
     private String emoji;

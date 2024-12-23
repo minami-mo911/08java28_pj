@@ -794,3 +794,102 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 38 more
+2024-12-23 15:16:12.941726+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "inu_dog223" が見つかりません
+Column "inu_dog223" not found; SQL statement:
+INSERT INTO picture (user_id, post_id, picture_url)
+ VALUES ("inu_dog223",6,"uploads/dog_1.jpg") [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:299)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1344)
+	at org.h2.server.web.WebApp.query(WebApp.java:1142)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1108)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1095)
+	at org.h2.server.web.WebThread.process(WebThread.java:190)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-12-23 15:18:56.398801+09:00 database: flush
+org.h2.message.DbException: 一般エラー: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]" [50000-232]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at util.DBUtil.getConnection(DBUtil.java:13)
+	at dao.PostDAO.create(PostDAO.java:44)
+	at model.PostLogic.execute(PostLogic.java:17)
+	at test.Main.main(Main.java:22)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: 一般エラー: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]" [50000-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2024-12-23 15:19:45.805609+09:00 database: flush
+org.h2.message.DbException: 一般エラー: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]" [50000-232]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at util.DBUtil.getConnection(DBUtil.java:13)
+	at dao.PostDAO.create(PostDAO.java:44)
+	at model.PostLogic.execute(PostLogic.java:17)
+	at test.Main.main(Main.java:22)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: 一般エラー: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]" [50000-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/8Java28/Desktop/workspace/08java28_pj/DB/ikimono.mv.db [2.3.232/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more

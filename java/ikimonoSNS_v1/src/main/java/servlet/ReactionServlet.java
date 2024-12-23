@@ -11,11 +11,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/ReactionServlet")
 public class ReactionServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+    private static final long serialVersionUID = 1L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -36,7 +35,18 @@ public class ReactionServlet extends HttpServlet {
 
         // DAOを呼び出してデータベースに保存
         ReactionDAO dao = new ReactionDAO();
-        boolean isSuccess = dao.addReaction(reaction);
+        boolean isSuccess = false;
+
+        // addReactionメソッドの呼び出しをtry-catchで囲む
+        try {
+            isSuccess = dao.addReaction(reaction);  // Exceptionがスローされる可能性があるため
+        } catch (Exception e) {
+            e.printStackTrace();
+            // エラーメッセージをリクエストに設定
+            request.setAttribute("errorMsg", "リアクションの追加中にエラーが発生しました");
+            request.getRequestDispatcher("WEB-INF/jsp/main.jsp").forward(request, response);
+            return;  // エラーハンドリング後に処理を終了
+        }
 
         // 処理結果に応じて遷移
         if (isSuccess) {
@@ -46,5 +56,4 @@ public class ReactionServlet extends HttpServlet {
             request.getRequestDispatcher("WEB-INF/jsp/main.jsp").forward(request, response);
         }
     }
-
 }
